@@ -53,14 +53,14 @@ class DragAndDropBlock(XBlock, XBlockWithSettingsMixin, ThemableXBlockMixin):
     }
 
     display_name = String(
-        display_name=_("Title"),
-        help=_("The title of the drag and drop problem. The title is displayed to learners."),
+        display_name=_("Заголовок"),
+        help=_("Заголовок проблемы драг энд дроп. The title is displayed to learners."),
         scope=Scope.settings,
-        default=_("Drag and Drop"),
+        default=_("Драг энд Дроп"),
     )
 
     mode = String(
-        display_name=_("Mode"),
+        display_name=_("Мод"),
         help=_(
             "Standard mode: the problem provides immediate feedback each time "
             "a learner drops an item on a target zone. "
@@ -69,7 +69,7 @@ class DragAndDropBlock(XBlock, XBlockWithSettingsMixin, ThemableXBlockMixin):
         ),
         scope=Scope.settings,
         values=[
-            {"display_name": _("Standard"), "value": Constants.STANDARD_MODE},
+            {"display_name": _("Стандартный"), "value": Constants.STANDARD_MODE},
             {"display_name": _("Assessment"), "value": Constants.ASSESSMENT_MODE},
         ],
         default=Constants.STANDARD_MODE
